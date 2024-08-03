@@ -1,0 +1,17 @@
+<launch>
+
+  <param name="robot_description" command="xacro '$(find nova_description)/urdf/nova.urdf.xacro'"/>
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <!-- Rviz_config -->
+  <arg name="rviz_config_file" default="$(find nova_description)/rviz_config/main.rviz" />
+
+  <!-- Rviz_node -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" />
+
+
+</launch>
+
+
