@@ -3,7 +3,11 @@ Panels:
     Help Height: 138
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /Global Options1
+        - /TF1
+        - /TF1/Status1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 1522
   - Class: rviz/Selection
@@ -98,6 +102,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
         robot_footprint:
           Alpha: 1
           Show Axes: false
@@ -114,12 +119,32 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        Left_Wheel_Back:
+          Value: false
+        Left_Wheel_Front:
+          Value: false
+        Raspberry_pi_4:
+          Value: false
+        Raspberry_pi_4_case:
+          Value: false
+        Right_Wheel_Back:
+          Value: false
+        Right_Wheel_Front:
+          Value: false
+        base_link:
+          Value: false
+        imu_link:
+          Value: true
+        robot_footprint:
+          Value: false
+        rplidar_link:
+          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -127,9 +152,26 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        robot_footprint:
+          base_link:
+            Left_Wheel_Back:
+              {}
+            Left_Wheel_Front:
+              {}
+            Raspberry_pi_4:
+              {}
+            Raspberry_pi_4_case:
+              {}
+            Right_Wheel_Back:
+              {}
+            Right_Wheel_Front:
+              {}
+            imu_link:
+              {}
+            rplidar_link:
+              {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Angle Tolerance: 0.10000000149011612
       Class: rviz/Odometry
       Covariance:
@@ -197,7 +239,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: odom
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -221,7 +263,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 14.049280166625977
+      Distance: 1.865516185760498
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -237,9 +279,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 0.40539783239364624
       Target Frame: <Fixed Frame>
-      Yaw: 0.785398006439209
+      Yaw: 6.15357780456543
     Saved: ~
 Window Geometry:
   Displays:
